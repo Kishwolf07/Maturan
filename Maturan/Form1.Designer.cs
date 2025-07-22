@@ -69,6 +69,7 @@
             txtPass.Size = new Size(293, 32);
             txtPass.TabIndex = 2;
             txtPass.Text = "Password";
+            txtPass.UseSystemPasswordChar = true;
             // 
             // lblUser
             // 
@@ -123,7 +124,9 @@
             Controls.Add(txtPass);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Form1";
+            Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
         }
