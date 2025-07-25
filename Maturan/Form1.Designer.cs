@@ -34,6 +34,7 @@
             lblUser = new Label();
             lblPass = new Label();
             btn_Login = new Button();
+            label1 = new Label();
             SuspendLayout();
             // 
             // lblTitle
@@ -109,6 +110,17 @@
             btn_Login.UseVisualStyleBackColor = false;
             btn_Login.Click += btn_Login_Click;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(704, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(25, 30);
+            label1.TabIndex = 6;
+            label1.Text = "X";
+            label1.Click += label1_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -116,6 +128,7 @@
             BackgroundImage = Properties.Resources.bg;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(731, 450);
+            Controls.Add(label1);
             Controls.Add(btn_Login);
             Controls.Add(lblPass);
             Controls.Add(txtUser);
@@ -139,5 +152,6 @@
         private Label lblUser;
         private Label lblPass;
         private Button btn_Login;
+        private Label label1;
     }
 }
