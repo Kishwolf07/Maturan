@@ -31,16 +31,24 @@
             lblAdmin = new Label();
             lbladminuser = new Label();
             panel1 = new Panel();
-            button5 = new Button();
-            button4 = new Button();
-            button3 = new Button();
-            button2 = new Button();
+            btnlogout = new Button();
+            btnreport = new Button();
+            btnlogs = new Button();
+            btnsubject = new Button();
+            btnteacher = new Button();
+            btnstudent = new Button();
             btndashboard = new Button();
             pictureBox1 = new PictureBox();
-            button6 = new Button();
-            button7 = new Button();
+            pictureBox2 = new PictureBox();
+            pictureBox3 = new PictureBox();
+            pictureBox4 = new PictureBox();
+            pictureBox5 = new PictureBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             SuspendLayout();
             // 
             // lblAdmin
@@ -65,12 +73,12 @@
             // 
             // panel1
             // 
-            panel1.Controls.Add(button7);
-            panel1.Controls.Add(button6);
-            panel1.Controls.Add(button5);
-            panel1.Controls.Add(button4);
-            panel1.Controls.Add(button3);
-            panel1.Controls.Add(button2);
+            panel1.Controls.Add(btnlogout);
+            panel1.Controls.Add(btnreport);
+            panel1.Controls.Add(btnlogs);
+            panel1.Controls.Add(btnsubject);
+            panel1.Controls.Add(btnteacher);
+            panel1.Controls.Add(btnstudent);
             panel1.Controls.Add(btndashboard);
             panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(lbladminuser);
@@ -80,45 +88,65 @@
             panel1.Size = new Size(151, 447);
             panel1.TabIndex = 2;
             // 
-            // button5
+            // btnlogout
             // 
-            button5.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button5.Location = new Point(25, 301);
-            button5.Name = "button5";
-            button5.Size = new Size(102, 37);
-            button5.TabIndex = 7;
-            button5.Text = "button5";
-            button5.UseVisualStyleBackColor = true;
+            btnlogout.Font = new Font("Verdana", 9.75F);
+            btnlogout.Location = new Point(25, 400);
+            btnlogout.Name = "btnlogout";
+            btnlogout.Size = new Size(102, 37);
+            btnlogout.TabIndex = 9;
+            btnlogout.Text = "Logout";
+            btnlogout.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btnreport
             // 
-            button4.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button4.Location = new Point(25, 258);
-            button4.Name = "button4";
-            button4.Size = new Size(102, 37);
-            button4.TabIndex = 6;
-            button4.Text = "button4";
-            button4.UseVisualStyleBackColor = true;
+            btnreport.Font = new Font("Verdana", 9.75F);
+            btnreport.Location = new Point(25, 344);
+            btnreport.Name = "btnreport";
+            btnreport.Size = new Size(102, 37);
+            btnreport.TabIndex = 8;
+            btnreport.Text = "Report";
+            btnreport.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnlogs
             // 
-            button3.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button3.Location = new Point(25, 215);
-            button3.Name = "button3";
-            button3.Size = new Size(102, 37);
-            button3.TabIndex = 5;
-            button3.Text = "button3";
-            button3.UseVisualStyleBackColor = true;
+            btnlogs.Font = new Font("Verdana", 9.75F);
+            btnlogs.Location = new Point(25, 301);
+            btnlogs.Name = "btnlogs";
+            btnlogs.Size = new Size(102, 37);
+            btnlogs.TabIndex = 7;
+            btnlogs.Text = "Logs";
+            btnlogs.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnsubject
             // 
-            button2.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button2.Location = new Point(25, 172);
-            button2.Name = "button2";
-            button2.Size = new Size(102, 37);
-            button2.TabIndex = 4;
-            button2.Text = "button2";
-            button2.UseVisualStyleBackColor = true;
+            btnsubject.Font = new Font("Verdana", 9.75F);
+            btnsubject.Location = new Point(25, 258);
+            btnsubject.Name = "btnsubject";
+            btnsubject.Size = new Size(102, 37);
+            btnsubject.TabIndex = 6;
+            btnsubject.Text = "Subject";
+            btnsubject.UseVisualStyleBackColor = true;
+            // 
+            // btnteacher
+            // 
+            btnteacher.Font = new Font("Verdana", 9.75F);
+            btnteacher.Location = new Point(25, 215);
+            btnteacher.Name = "btnteacher";
+            btnteacher.Size = new Size(102, 37);
+            btnteacher.TabIndex = 5;
+            btnteacher.Text = "Teacher";
+            btnteacher.UseVisualStyleBackColor = true;
+            // 
+            // btnstudent
+            // 
+            btnstudent.Font = new Font("Verdana", 9.75F);
+            btnstudent.Location = new Point(25, 172);
+            btnstudent.Name = "btnstudent";
+            btnstudent.Size = new Size(102, 37);
+            btnstudent.TabIndex = 4;
+            btnstudent.Text = "Student";
+            btnstudent.UseVisualStyleBackColor = true;
             // 
             // btndashboard
             // 
@@ -140,31 +168,55 @@
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
             // 
-            // button6
+            // pictureBox2
             // 
-            button6.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button6.Location = new Point(25, 344);
-            button6.Name = "button6";
-            button6.Size = new Size(102, 37);
-            button6.TabIndex = 8;
-            button6.Text = "button6";
-            button6.UseVisualStyleBackColor = true;
+            pictureBox2.Image = Properties.Resources.images__1_;
+            pictureBox2.Location = new Point(247, 40);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(218, 194);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.TabIndex = 3;
+            pictureBox2.TabStop = false;
             // 
-            // button7
+            // pictureBox3
             // 
-            button7.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button7.Location = new Point(25, 400);
-            button7.Name = "button7";
-            button7.Size = new Size(102, 37);
-            button7.TabIndex = 9;
-            button7.Text = "button7";
-            button7.UseVisualStyleBackColor = true;
+            pictureBox3.Image = Properties.Resources.download__2_;
+            pictureBox3.Location = new Point(499, 40);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(211, 194);
+            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox3.TabIndex = 4;
+            pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            pictureBox4.Image = Properties.Resources.download__1_;
+            pictureBox4.Location = new Point(247, 246);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(218, 173);
+            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox4.TabIndex = 5;
+            pictureBox4.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            pictureBox5.Image = Properties.Resources.images;
+            pictureBox5.Location = new Point(499, 246);
+            pictureBox5.Name = "pictureBox5";
+            pictureBox5.Size = new Size(211, 173);
+            pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox5.TabIndex = 6;
+            pictureBox5.TabStop = false;
             // 
             // Admin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(pictureBox5);
+            Controls.Add(pictureBox4);
+            Controls.Add(pictureBox3);
+            Controls.Add(pictureBox2);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Admin";
@@ -173,6 +225,10 @@
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ResumeLayout(false);
         }
 
@@ -183,11 +239,15 @@
         private Panel panel1;
         private Button btndashboard;
         private PictureBox pictureBox1;
-        private Button button5;
-        private Button button4;
-        private Button button3;
-        private Button button2;
-        private Button button6;
-        private Button button7;
+        private Button btnlogs;
+        private Button btnsubject;
+        private Button btnteacher;
+        private Button btnstudent;
+        private Button btnreport;
+        private Button btnlogout;
+        private PictureBox pictureBox2;
+        private PictureBox pictureBox3;
+        private PictureBox pictureBox4;
+        private PictureBox pictureBox5;
     }
 }
