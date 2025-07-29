@@ -51,9 +51,15 @@
             SEdate = new DataGridViewTextBoxColumn();
             Sstatus = new DataGridViewTextBoxColumn();
             Srole_id = new DataGridViewTextBoxColumn();
+            btnadd = new Button();
+            btndelete = new Button();
+            btnupdate = new Button();
+            txtsearch = new TextBox();
+            pictureBox2 = new PictureBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -178,7 +184,7 @@
             dataGridView1.AllowUserToOrderColumns = true;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { studentid, Sfname, SLname, SDbirth, Sgender, Semail, Sphone, SAddress, SEdate, Sstatus, Srole_id });
-            dataGridView1.Location = new Point(185, 107);
+            dataGridView1.Location = new Point(193, 65);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.Size = new Size(585, 330);
             dataGridView1.TabIndex = 4;
@@ -241,11 +247,66 @@
             Srole_id.HeaderText = "Role_Id";
             Srole_id.Name = "Srole_id";
             // 
+            // btnadd
+            // 
+            btnadd.Font = new Font("Verdana", 9.75F);
+            btnadd.Location = new Point(315, 401);
+            btnadd.Name = "btnadd";
+            btnadd.Size = new Size(102, 37);
+            btnadd.TabIndex = 10;
+            btnadd.Text = "Add New";
+            btnadd.UseVisualStyleBackColor = true;
+            // 
+            // btndelete
+            // 
+            btndelete.Font = new Font("Verdana", 9.75F);
+            btndelete.Location = new Point(440, 401);
+            btndelete.Name = "btndelete";
+            btndelete.Size = new Size(102, 37);
+            btndelete.TabIndex = 11;
+            btndelete.Text = "Delete";
+            btndelete.UseVisualStyleBackColor = true;
+            // 
+            // btnupdate
+            // 
+            btnupdate.Font = new Font("Verdana", 9.75F);
+            btnupdate.Location = new Point(560, 401);
+            btnupdate.Name = "btnupdate";
+            btnupdate.Size = new Size(102, 37);
+            btnupdate.TabIndex = 12;
+            btnupdate.Text = "Update";
+            btnupdate.UseVisualStyleBackColor = true;
+            // 
+            // txtsearch
+            // 
+            txtsearch.BackColor = Color.White;
+            txtsearch.ForeColor = Color.Silver;
+            txtsearch.Location = new Point(644, 32);
+            txtsearch.Name = "txtsearch";
+            txtsearch.Size = new Size(134, 23);
+            txtsearch.TabIndex = 13;
+            txtsearch.Text = "Search";
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = Properties.Resources.download;
+            pictureBox2.Location = new Point(610, 31);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(34, 25);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.TabIndex = 14;
+            pictureBox2.TabStop = false;
+            // 
             // Student
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(pictureBox2);
+            Controls.Add(txtsearch);
+            Controls.Add(btnupdate);
+            Controls.Add(btndelete);
+            Controls.Add(btnadd);
             Controls.Add(dataGridView1);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
@@ -256,7 +317,9 @@
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -284,5 +347,10 @@
         private DataGridViewTextBoxColumn SEdate;
         private DataGridViewTextBoxColumn Sstatus;
         private DataGridViewTextBoxColumn Srole_id;
+        private Button btnadd;
+        private Button btndelete;
+        private Button btnupdate;
+        private TextBox txtsearch;
+        private PictureBox pictureBox2;
     }
 }

@@ -28,6 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             lblAdmin = new Label();
             lbladminuser = new Label();
             panel1 = new Panel();
@@ -39,16 +51,17 @@
             btnstudent = new Button();
             btndashboard = new Button();
             pictureBox1 = new PictureBox();
-            pictureBox2 = new PictureBox();
-            pictureBox3 = new PictureBox();
-            pictureBox4 = new PictureBox();
-            pictureBox5 = new PictureBox();
+            backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            chart3 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            chart4 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)chart1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)chart2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)chart3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)chart4).BeginInit();
             SuspendLayout();
             // 
             // lblAdmin
@@ -97,6 +110,7 @@
             btnlogout.TabIndex = 9;
             btnlogout.Text = "Logout";
             btnlogout.UseVisualStyleBackColor = true;
+            btnlogout.Click += btnlogout_Click;
             // 
             // btnreport
             // 
@@ -168,55 +182,82 @@
             pictureBox1.TabIndex = 2;
             pictureBox1.TabStop = false;
             // 
-            // pictureBox2
+            // chart1
             // 
-            pictureBox2.Image = Properties.Resources.images__1_;
-            pictureBox2.Location = new Point(247, 40);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(218, 194);
-            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox2.TabIndex = 3;
-            pictureBox2.TabStop = false;
+            chartArea1.Name = "ChartArea1";
+            chart1.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            chart1.Legends.Add(legend1);
+            chart1.Location = new Point(520, 245);
+            chart1.Name = "chart1";
+            series1.ChartArea = "ChartArea1";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            chart1.Series.Add(series1);
+            chart1.Size = new Size(192, 171);
+            chart1.TabIndex = 10;
+            chart1.Text = "chart1";
             // 
-            // pictureBox3
+            // chart2
             // 
-            pictureBox3.Image = Properties.Resources.download__2_;
-            pictureBox3.Location = new Point(499, 40);
-            pictureBox3.Name = "pictureBox3";
-            pictureBox3.Size = new Size(211, 194);
-            pictureBox3.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox3.TabIndex = 4;
-            pictureBox3.TabStop = false;
+            chartArea2.Name = "ChartArea1";
+            chart2.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            chart2.Legends.Add(legend2);
+            chart2.Location = new Point(264, 39);
+            chart2.Name = "chart2";
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            chart2.Series.Add(series2);
+            chart2.Size = new Size(200, 181);
+            chart2.TabIndex = 11;
+            chart2.Text = "chart2";
             // 
-            // pictureBox4
+            // chart3
             // 
-            pictureBox4.Image = Properties.Resources.download__1_;
-            pictureBox4.Location = new Point(247, 246);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(218, 173);
-            pictureBox4.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox4.TabIndex = 5;
-            pictureBox4.TabStop = false;
+            chartArea3.Name = "ChartArea1";
+            chart3.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            chart3.Legends.Add(legend3);
+            chart3.Location = new Point(264, 245);
+            chart3.Name = "chart3";
+            series3.ChartArea = "ChartArea1";
+            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            chart3.Series.Add(series3);
+            chart3.Size = new Size(200, 171);
+            chart3.TabIndex = 12;
+            chart3.Text = "chart3";
             // 
-            // pictureBox5
+            // chart4
             // 
-            pictureBox5.Image = Properties.Resources.images;
-            pictureBox5.Location = new Point(499, 246);
-            pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(211, 173);
-            pictureBox5.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox5.TabIndex = 6;
-            pictureBox5.TabStop = false;
+            chartArea4.Name = "ChartArea1";
+            chart4.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            chart4.Legends.Add(legend4);
+            chart4.Location = new Point(520, 39);
+            chart4.Name = "chart4";
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Bar;
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            chart4.Series.Add(series4);
+            chart4.Size = new Size(192, 171);
+            chart4.TabIndex = 13;
+            chart4.Text = "chart4";
             // 
             // Admin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(pictureBox5);
-            Controls.Add(pictureBox4);
-            Controls.Add(pictureBox3);
-            Controls.Add(pictureBox2);
+            Controls.Add(chart4);
+            Controls.Add(chart3);
+            Controls.Add(chart2);
+            Controls.Add(chart1);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Admin";
@@ -225,10 +266,10 @@
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)chart1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)chart2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)chart3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)chart4).EndInit();
             ResumeLayout(false);
         }
 
@@ -245,9 +286,10 @@
         private Button btnstudent;
         private Button btnreport;
         private Button btnlogout;
-        private PictureBox pictureBox2;
-        private PictureBox pictureBox3;
-        private PictureBox pictureBox4;
-        private PictureBox pictureBox5;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart3;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart4;
     }
 }

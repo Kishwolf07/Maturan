@@ -51,9 +51,15 @@
             pictureBox1 = new PictureBox();
             lbladminuser = new Label();
             lblAdmin = new Label();
+            pictureBox2 = new PictureBox();
+            txtsearch = new TextBox();
+            btnupdate = new Button();
+            btndelete = new Button();
+            btnadd = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // dataGridView1
@@ -61,7 +67,7 @@
             dataGridView1.AllowUserToOrderColumns = true;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Columns.AddRange(new DataGridViewColumn[] { studentid, Sfname, SLname, SDbirth, Sgender, Semail, Sphone, SAddress, SEdate, Sstatus, Srole_id });
-            dataGridView1.Location = new Point(185, 97);
+            dataGridView1.Location = new Point(193, 65);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.Size = new Size(585, 330);
             dataGridView1.TabIndex = 6;
@@ -241,11 +247,66 @@
             lblAdmin.TabIndex = 0;
             lblAdmin.Text = "Welcome";
             // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = Properties.Resources.download;
+            pictureBox2.Location = new Point(610, 35);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(34, 25);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.TabIndex = 19;
+            pictureBox2.TabStop = false;
+            // 
+            // txtsearch
+            // 
+            txtsearch.BackColor = Color.White;
+            txtsearch.ForeColor = Color.Silver;
+            txtsearch.Location = new Point(644, 36);
+            txtsearch.Name = "txtsearch";
+            txtsearch.Size = new Size(134, 23);
+            txtsearch.TabIndex = 18;
+            txtsearch.Text = "Search";
+            // 
+            // btnupdate
+            // 
+            btnupdate.Font = new Font("Verdana", 9.75F);
+            btnupdate.Location = new Point(560, 405);
+            btnupdate.Name = "btnupdate";
+            btnupdate.Size = new Size(102, 37);
+            btnupdate.TabIndex = 17;
+            btnupdate.Text = "Update";
+            btnupdate.UseVisualStyleBackColor = true;
+            // 
+            // btndelete
+            // 
+            btndelete.Font = new Font("Verdana", 9.75F);
+            btndelete.Location = new Point(440, 405);
+            btndelete.Name = "btndelete";
+            btndelete.Size = new Size(102, 37);
+            btndelete.TabIndex = 16;
+            btndelete.Text = "Delete";
+            btndelete.UseVisualStyleBackColor = true;
+            // 
+            // btnadd
+            // 
+            btnadd.Font = new Font("Verdana", 9.75F);
+            btnadd.Location = new Point(315, 405);
+            btnadd.Name = "btnadd";
+            btnadd.Size = new Size(102, 37);
+            btnadd.TabIndex = 15;
+            btnadd.Text = "Add New";
+            btnadd.UseVisualStyleBackColor = true;
+            // 
             // Teacher
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(pictureBox2);
+            Controls.Add(txtsearch);
+            Controls.Add(btnupdate);
+            Controls.Add(btndelete);
+            Controls.Add(btnadd);
             Controls.Add(dataGridView1);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
@@ -256,7 +317,9 @@
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -284,5 +347,10 @@
         private PictureBox pictureBox1;
         private Label lbladminuser;
         private Label lblAdmin;
+        private PictureBox pictureBox2;
+        private TextBox txtsearch;
+        private Button btnupdate;
+        private Button btndelete;
+        private Button btnadd;
     }
 }

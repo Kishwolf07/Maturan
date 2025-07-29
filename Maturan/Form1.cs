@@ -47,7 +47,7 @@ namespace Maturan
                                 break;
                             case 2:
                                 //MessageBox.Show("2  Welcome Student!");
-                                Student studentform = new Student(passdata);
+                                Student studentform = new Student();
                                 studentform.Show();
                                 break;
                             case 3:
@@ -80,7 +80,7 @@ namespace Maturan
 
             txtPass.Text = "Password";
             txtPass.ForeColor = Color.Gray;
-            txtPass.UseSystemPasswordChar = false;
+            txtPass.UseSystemPasswordChar = true;
 
         }
 

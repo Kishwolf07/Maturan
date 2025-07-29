@@ -13,13 +13,18 @@ namespace Maturan
 {
     public partial class Admin : Form
     {
-     
+
         public Admin(string getdata)
         {
-            InitializeComponent();  
+            InitializeComponent();
             lbladminuser.Text = getdata;
-            
+
         }
 
+        private void btnlogout_Click(object sender, EventArgs e)
+        {
+            Form1 loginform = new Form1();
+            loginform.Show();
+        }
     }
 }
