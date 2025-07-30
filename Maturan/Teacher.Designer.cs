@@ -29,17 +29,6 @@
         private void InitializeComponent()
         {
             dataGridView1 = new DataGridView();
-            studentid = new DataGridViewTextBoxColumn();
-            Sfname = new DataGridViewTextBoxColumn();
-            SLname = new DataGridViewTextBoxColumn();
-            SDbirth = new DataGridViewTextBoxColumn();
-            Sgender = new DataGridViewTextBoxColumn();
-            Semail = new DataGridViewTextBoxColumn();
-            Sphone = new DataGridViewTextBoxColumn();
-            SAddress = new DataGridViewTextBoxColumn();
-            SEdate = new DataGridViewTextBoxColumn();
-            Sstatus = new DataGridViewTextBoxColumn();
-            Srole_id = new DataGridViewTextBoxColumn();
             panel1 = new Panel();
             btnlogout = new Button();
             btnreport = new Button();
@@ -56,6 +45,17 @@
             btnupdate = new Button();
             btndelete = new Button();
             btnadd = new Button();
+            teacherid = new DataGridViewTextBoxColumn();
+            Tfname = new DataGridViewTextBoxColumn();
+            TLname = new DataGridViewTextBoxColumn();
+            Hdate = new DataGridViewTextBoxColumn();
+            depart = new DataGridViewTextBoxColumn();
+            Semail = new DataGridViewTextBoxColumn();
+            Sphone = new DataGridViewTextBoxColumn();
+            address = new DataGridViewTextBoxColumn();
+            special = new DataGridViewTextBoxColumn();
+            Tstatus = new DataGridViewTextBoxColumn();
+            Trole_id = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -66,69 +66,11 @@
             // 
             dataGridView1.AllowUserToOrderColumns = true;
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { studentid, Sfname, SLname, SDbirth, Sgender, Semail, Sphone, SAddress, SEdate, Sstatus, Srole_id });
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { teacherid, Tfname, TLname, Hdate, depart, Semail, Sphone, address, special, Tstatus, Trole_id });
             dataGridView1.Location = new Point(193, 65);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.Size = new Size(585, 330);
             dataGridView1.TabIndex = 6;
-            // 
-            // studentid
-            // 
-            studentid.HeaderText = "student_id";
-            studentid.Name = "studentid";
-            studentid.ReadOnly = true;
-            // 
-            // Sfname
-            // 
-            Sfname.HeaderText = "first_name";
-            Sfname.Name = "Sfname";
-            Sfname.ReadOnly = true;
-            // 
-            // SLname
-            // 
-            SLname.HeaderText = "Last_name";
-            SLname.Name = "SLname";
-            SLname.ReadOnly = true;
-            // 
-            // SDbirth
-            // 
-            SDbirth.HeaderText = "Birth Date";
-            SDbirth.Name = "SDbirth";
-            // 
-            // Sgender
-            // 
-            Sgender.HeaderText = "Gender";
-            Sgender.Name = "Sgender";
-            // 
-            // Semail
-            // 
-            Semail.HeaderText = "Email";
-            Semail.Name = "Semail";
-            // 
-            // Sphone
-            // 
-            Sphone.HeaderText = "Phone";
-            Sphone.Name = "Sphone";
-            // 
-            // SAddress
-            // 
-            SAddress.HeaderText = "Address";
-            SAddress.Name = "SAddress";
-            // 
-            // SEdate
-            // 
-            SEdate.HeaderText = "Enrollment Date";
-            SEdate.Name = "SEdate";
-            // 
-            // Sstatus
-            // 
-            Sstatus.HeaderText = "Status";
-            Sstatus.Name = "Sstatus";
-            // 
-            // Srole_id
-            // 
-            Srole_id.HeaderText = "Role_Id";
-            Srole_id.Name = "Srole_id";
             // 
             // panel1
             // 
@@ -297,6 +239,64 @@
             btnadd.Text = "Add New";
             btnadd.UseVisualStyleBackColor = true;
             // 
+            // teacherid
+            // 
+            teacherid.HeaderText = "Teacher_id";
+            teacherid.Name = "teacherid";
+            teacherid.ReadOnly = true;
+            // 
+            // Tfname
+            // 
+            Tfname.HeaderText = "first_name";
+            Tfname.Name = "Tfname";
+            Tfname.ReadOnly = true;
+            // 
+            // TLname
+            // 
+            TLname.HeaderText = "Last_name";
+            TLname.Name = "TLname";
+            TLname.ReadOnly = true;
+            // 
+            // Hdate
+            // 
+            Hdate.HeaderText = "Hire Date";
+            Hdate.Name = "Hdate";
+            // 
+            // depart
+            // 
+            depart.HeaderText = "Department";
+            depart.Name = "depart";
+            // 
+            // Semail
+            // 
+            Semail.HeaderText = "Email";
+            Semail.Name = "Semail";
+            // 
+            // Sphone
+            // 
+            Sphone.HeaderText = "Phone";
+            Sphone.Name = "Sphone";
+            // 
+            // address
+            // 
+            address.HeaderText = "Address";
+            address.Name = "address";
+            // 
+            // special
+            // 
+            special.HeaderText = "Specialization";
+            special.Name = "special";
+            // 
+            // Tstatus
+            // 
+            Tstatus.HeaderText = "Status";
+            Tstatus.Name = "Tstatus";
+            // 
+            // Trole_id
+            // 
+            Trole_id.HeaderText = "Role_Id";
+            Trole_id.Name = "Trole_id";
+            // 
             // Teacher
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -325,17 +325,6 @@
         #endregion
 
         private DataGridView dataGridView1;
-        private DataGridViewTextBoxColumn studentid;
-        private DataGridViewTextBoxColumn Sfname;
-        private DataGridViewTextBoxColumn SLname;
-        private DataGridViewTextBoxColumn SDbirth;
-        private DataGridViewTextBoxColumn Sgender;
-        private DataGridViewTextBoxColumn Semail;
-        private DataGridViewTextBoxColumn Sphone;
-        private DataGridViewTextBoxColumn SAddress;
-        private DataGridViewTextBoxColumn SEdate;
-        private DataGridViewTextBoxColumn Sstatus;
-        private DataGridViewTextBoxColumn Srole_id;
         private Panel panel1;
         private Button btnlogout;
         private Button btnreport;
@@ -352,5 +341,16 @@
         private Button btnupdate;
         private Button btndelete;
         private Button btnadd;
+        private DataGridViewTextBoxColumn teacherid;
+        private DataGridViewTextBoxColumn Tfname;
+        private DataGridViewTextBoxColumn TLname;
+        private DataGridViewTextBoxColumn Hdate;
+        private DataGridViewTextBoxColumn depart;
+        private DataGridViewTextBoxColumn Semail;
+        private DataGridViewTextBoxColumn Sphone;
+        private DataGridViewTextBoxColumn address;
+        private DataGridViewTextBoxColumn special;
+        private DataGridViewTextBoxColumn Tstatus;
+        private DataGridViewTextBoxColumn Trole_id;
     }
 }

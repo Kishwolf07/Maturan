@@ -8,7 +8,7 @@ namespace Maturan
 {
     public partial class Form1 : Form
     {
-        static string connection = "Data Source=LAB4-PC24\\LAB3PC36;Initial Catalog=SIS;Integrated Security=True;TrustServerCertificate=True";
+        static string connection = "";
         public Form1()
         {
             InitializeComponent();
@@ -26,7 +26,7 @@ namespace Maturan
                 try
                 {
                     conn.Open();
-                    string query = "SELECT role_id FROM user_login WHERE username = @user AND password  = @pass";
+                    string query = "SELECT role_id FROM user_login WHERE username = @user AND password_hash  = @pass";
 
                     SqlCommand cmd = new SqlCommand(query, conn);
                     cmd.Parameters.AddWithValue("@user", user);
@@ -47,12 +47,12 @@ namespace Maturan
                                 break;
                             case 2:
                                 //MessageBox.Show("2  Welcome Student!");
-                                Student studentform = new Student();
+                                Student studentform = new Student(passdata);
                                 studentform.Show();
                                 break;
                             case 3:
                                 // MessageBox.Show("3  Welcome Teacher!");
-                               Teacher Teacherform = new Teacher();
+                               Teacher Teacherform = new Teacher(passdata);
                                 Teacherform.Show();
                                 break;
                             default:

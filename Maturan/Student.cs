@@ -12,10 +12,12 @@ namespace Maturan
 {
     public partial class Student : Form
     {
-        public Student()
+        public Student(string getdata)
         {
             InitializeComponent();
-            
+            lbladminuser.Text = getdata;
+
+
         }
     }
 }

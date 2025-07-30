@@ -151,6 +151,7 @@
             btnteacher.TabIndex = 5;
             btnteacher.Text = "Teacher";
             btnteacher.UseVisualStyleBackColor = true;
+            btnteacher.Click += btnteacher_Click;
             // 
             // btnstudent
             // 
@@ -161,6 +162,7 @@
             btnstudent.TabIndex = 4;
             btnstudent.Text = "Student";
             btnstudent.UseVisualStyleBackColor = true;
+            btnstudent.Click += btnstudent_Click;
             // 
             // btndashboard
             // 
@@ -171,6 +173,7 @@
             btndashboard.TabIndex = 3;
             btndashboard.Text = "Dashboard";
             btndashboard.UseVisualStyleBackColor = true;
+            btndashboard.Click += btndashboard_Click;
             // 
             // pictureBox1
             // 
